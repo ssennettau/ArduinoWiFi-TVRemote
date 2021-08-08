@@ -20,10 +20,10 @@ The XC4411 could be substituted for any similar unit, but the code would need to
 
 The XC4411 contains two separate microcontrollers on the one board: one running the Arduino Uno on the ATmega328P, and the ESP8266 as a separate MCU. The two communicate using the Serial channel. Because of this, the ESP8266 cannot directly use the `digitalWrite` function, and instead need to direct each other using messages.
 
-File | Description
-- | -
-[`arduino.ino`](code/arduino.ino) | Sketch for the Arduino Uno
-[`esp8266.ino`](code/esp8266.ino) | Sketch for the ESP8266
+| File | Description |
+| - | - |
+| [`arduino.ino`](code/arduino.ino) | Sketch for the Arduino Uno |
+| [`esp8266.ino`](code/esp8266.ino) | Sketch for the ESP8266 |
 
 # Interface #
 
@@ -68,10 +68,10 @@ Definitely, it just needs extra information about what infrared signals to send,
 
 Part of the code for the Arduino includes a `blink` function, which causes the built-in LED to flash several times, depending on the operation.
 
-\# | Operation
-- | -
-3 | Signal received from Serial
-5 | Signal sent through IR Transmitter
+| \# | Operation |
+| - | - |
+| 3 | Signal received from Serial |
+| 5 | Signal sent through IR Transmitter |
 
 When the light flashes in two sets of pulses, 3 + 5, a command has been received by the web interface, and then forwarded to the IR Transmitter. If it does not work, either the IR LED may be faulty, signal not reaching the IR LED, receiver on the destination device is faulty, or the codes are incorrect.
 
